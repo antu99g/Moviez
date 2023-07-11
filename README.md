@@ -6,17 +6,25 @@ This is a movie website built using react. This app uses an external api named '
 
 `React` `Redux Toolkit` `SCSS`
 
-<!--
 ## Features
 
 - Responsive, supperted in all screen sizes
 
+<!--
 - Advanced sorting in search results
 
 - Added filtration in explore page
+-->
 
 - Dynamically rendered background
--->
+
+- Lazy loading of images
+
+- Infinite scrolling in search results and explore page
+
+<!-- - Added skeletons in different components -->
+
+- Responsive navbar menu, different for smaller screen sizes
 
 ## Run Locally
 
@@ -54,28 +62,25 @@ To run this project, you need to add the following environment variables in your
 
 ## API Reference
 
-External API called `TMDB` is used in this project. \*\*Requires sign up.
+External API named `TMDB` is used in this project. \*\*Requires sign up.
 
 [TMDB](https://www.themoviedb.org/)
 
 ## Hosted Link
 
-Visit site: [Moviez](https://moviez-384f35.netlify.app)
+Visit site: [Moviez](https://moviez-9d8b10.netlify.app)
 
 ## Screenshots
 
-<img src="https://github.com/antu99g/Alarm-Clock/assets/114740896/bd76a811-0925-4ce3-a0c5-552985a2d174" alt="screenshot" height="150" width="250">
+<img src="https://github.com/antu99g/Moviez/assets/114740896/34305991-a7d9-4099-8c20-c5f4a13d2497" alt="screenshot" height="150" width="250">
 &ensp;
-<img src="https://github.com/antu99g/Alarm-Clock/assets/114740896/ea8de342-2fc1-47b4-a9e8-6791c2aea7b5" alt="screenshot" height="150" width="250">
+<img src="https://github.com/antu99g/Moviez/assets/114740896/f728f555-6a2d-4321-bc79-87d01da86143" alt="screenshot" height="150" width="250">
 &ensp;
-<img src="https://github.com/antu99g/Alarm-Clock/assets/114740896/a48583b4-07a1-4b67-b22b-8ccfbfd6a3eb" alt="screenshot" height="150" width="250">
-&ensp;
-
-<img src="https://github.com/antu99g/Alarm-Clock/assets/114740896/be6b21f6-c7a7-4971-a7de-4645577ac153" alt="screenshot" height="150" width="250">
-&ensp;
-<img src="https://github.com/antu99g/Alarm-Clock/assets/114740896/bbee7af9-6b5e-43d9-9151-308f5ad61086" alt="screenshot" height="150" width="250">
-&ensp;
-<img src="https://github.com/antu99g/Store-e-commerce/assets/114740896/caad536a-73ee-40a1-97b4-8487526c4816" alt="screenshot" height="150" width="250">
+<img src="https://github.com/antu99g/Moviez/assets/114740896/b0c46f20-fc18-457b-b65c-cad7e4201e41" alt="screenshot" height="150" width="250">
 &ensp;
 
-<img src="https://github.com/antu99g/Store-e-commerce/assets/114740896/fa066830-3707-48d2-9b61-22d30b8d1586" alt="screenshot" height="150" width="250">
+<img src="https://github.com/antu99g/Moviez/assets/114740896/a3e5db49-615c-46c6-b29f-085edd913b80" alt="screenshot" height="150" width="250">
+&ensp;
+<img src="https://github.com/antu99g/Moviez/assets/114740896/f1e938c1-62af-4127-bff2-2b9322f19a86" alt="screenshot" height="150" width="250">
+&ensp;
+<img src="https://github.com/antu99g/Moviez/assets/114740896/246b4f08-0870-4af0-b997-0104fade5d89" alt="screenshot" height="150" width="250">
