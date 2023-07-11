@@ -1,0 +1,19 @@
+.searchResultContainer {
+  padding: 16vh 5vw 10vh;
+  .pageTitle {
+    margin: 0 0 5vh;
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    font-weight: 500;
+    .queryHeader {
+      margin-left: 14px;
+      font-weight: 600;
+    }
+  }
+  .resultNotFound {
+    margin: 18vh 0;
+    font-size: 2.2em;
+    text-align: center;
+  }
+}

@@ -1,0 +1,52 @@
+@import "../../../mixins.scss";
+
+.castCard {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+  transition: all 0.2s ease;
+  &:hover {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+  }
+  & .lazy-load-image-loaded {
+    width: 120px;
+    aspect-ratio: 1 / 1;
+    background-size: contain;
+    background-position: center;
+    border-radius: 50%;
+    overflow: hidden;
+    // object-fit: cover;
+    // object-position: center;
+    @include md {
+      width: 150px;
+    }
+    & img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  & > h3 {
+    margin: 3vh 0 10px;
+    text-align: center;
+    font-size: 0.9em;
+    @include md {
+      font-size: 1em;
+      margin: 4vh 0 10px;
+    }
+    @include lg {
+      margin: 5vh 0 10px;
+    }
+  }
+  & > p {
+    margin: 0;
+    opacity: 0.5;
+    text-align: center;
+    font-size: 0.8em;
+    @include md {
+      font-size: 1em;
+    }
+  }
+}

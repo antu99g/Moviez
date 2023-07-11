@@ -1,0 +1,144 @@
+@import "../../mixins.scss";
+
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1.5vh 3vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  @include md {
+    padding: 1vh 3vw;
+  }
+  .logo {
+    margin: 0;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, var(--orange) 5%, var(--pink) 90%);
+    font-size: 2em;
+    font-family: "Belanosima", sans-serif;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    @include md {
+      font-size: 2.3em;
+    }
+    @include lg {
+      font-size: 2.5em;
+    }
+    & img {
+      width: 28px;
+      margin-right: 5px;
+      @include md {
+        margin-right: 8px;
+        width: 35px;
+      }
+      @include lg {
+        width: 42px;
+      }
+    }
+  }
+  .menu {
+    display: none;
+    list-style-type: none;
+    & > li {
+      margin-left: 3vw;
+      &:hover {
+        color: orangered;
+        cursor: pointer;
+      }
+    }
+    @include md {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .mobileMenu {
+    display: flex;
+    align-items: center;
+    @include md {
+      display: none;
+    }
+    & svg {
+      margin-left: 5vw;
+      font-size: 1.1em;
+      &:hover {
+        color: orangered;
+        cursor: pointer;
+      }
+    }
+    .mobileMenuItems {
+      width: 100vw;
+      margin: 0;
+      padding: 2vh 5vw;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--black2);
+      border-top: 1px solid rgb(75, 73, 73);
+      list-style-type: none;
+      animation: dropdown 0.3s normal;
+      @include md {
+        display: none;
+      }
+      & > li {
+        font-size: 1.2em;
+        padding: 2vh 0;
+        &:hover {
+          color: orangered;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .searchModal {
+    box-sizing: border-box;
+    width: min(100%, 100vw);
+    padding: 2vh 4vw;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    background-color: white;
+    animation: dropdown 0.3s normal;
+    @include md {
+      padding: 2vh 8vw;
+    }
+    & input {
+      flex-grow: 1;
+      border: 0;
+      &:focus {
+        outline: none;
+      }
+    }
+    & svg {
+      margin: 0 10px;
+      font-size: 1.2em;
+      color: darkslategrey;
+    }
+  }
+}
+
+.mobileHeader {
+  background-color: var(--black2);
+}
+
+@keyframes dropdown {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: "100%";
+  }
+}

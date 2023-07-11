@@ -1,0 +1,75 @@
+@import "../../../mixins.scss";
+
+.videoSection {
+  width: 100%;
+  margin-bottom: min(8vh, 60px);
+  padding: 0;
+  overflow-x: hidden;
+  .videoHeader {
+    padding: 0 5vw;
+    font-size: 1.6em;
+    font-weight: 500;
+  }
+  .videoContainer {
+    width: 100%;
+    padding: 0 5vw;
+    overflow-x: auto;
+    display: flex;
+    gap: 20px;
+    .videoCard {
+      display: flex;
+      flex-direction: column;
+      .videoBanner {
+        width: 180px;
+        aspect-ratio: 16 / 9;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        @include md {
+          width: 220px;
+        }
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.4);
+          & > svg {
+            color: var(--pink);
+            transform: scale(1.2);
+          }
+        }
+        .thumbnail {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -2;
+          object-fit: cover;
+          object-position: center;
+        }
+        & > svg {
+          width: 40px;
+          height: 40px;
+          transition: all 0.7s ease;
+          @include md {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+      .videoTitle {
+        margin-top: 15px;
+        color: white;
+        font-size: 0.8em;
+        line-height: 1.1em;
+        @include md {
+          font-size: 1em;
+          line-height: 1.2em;
+        }
+      }
+    }
+  }
+}

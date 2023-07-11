@@ -1,0 +1,5 @@
+@import "../searchResult/search.scss";
+
+.exploreContainer {
+  @extend .searchResultContainer;
+}

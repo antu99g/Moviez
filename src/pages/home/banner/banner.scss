@@ -1,0 +1,108 @@
+@import "../../../mixins.scss";
+
+.banner {
+  width: 100vw;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  @include md {
+    height: 75vh;
+  }
+  @include lg {
+    height: 100vh;
+  }
+  .bannerContent {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    & > h1 {
+      margin: 0;
+      font-size: 2.8em;
+      font-weight: 700;
+      @include sm {
+        font-size: 4em;
+      }
+      @include md {
+        font-size: 5em;
+      }
+      @include lg {
+        font-size: 5.5rem;
+      }
+    }
+    & > h2 {
+      margin: 0 0 5vh;
+      text-align: center;
+      font-size: 0.9em;
+      font-weight: 500;
+      @include sm {
+        font-size: 1.1em;
+      }
+      @include md {
+        font-size: 1.5em;
+      }
+    }
+    .searchInput {
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      @include sm {
+        width: 80%;
+      }
+      @include md {
+        width: 70%;
+      }
+      @include lg {
+        width: 60%;
+      }
+      & input {
+        width: 75%;
+        padding: 2vh 4vw;
+        border: 0;
+        border-radius: 30px 0 0 30px;
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          font-size: 1rem;
+          font-weight: 500;
+        }
+        @include sm {
+          padding: 2vh 4vw;
+        }
+        @include md {
+          padding: 2.5vh 3vw;
+          font-size: 1.1em;
+          &::placeholder {
+            font-size: 1.2rem;
+          }
+        }
+        @include lg {
+          font-size: 1.2em;
+          width: 80%;
+        }
+      }
+      & button {
+        width: 25%;
+        color: white;
+        background: var(--gradient);
+        border: 0;
+        border-radius: 0 30px 30px 0;
+        font-size: 1rem;
+        font-weight: 500;
+        @include md {
+          font-size: 1.2rem;
+        }
+        @include lg {
+          width: 20%;
+        }
+        &:active {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

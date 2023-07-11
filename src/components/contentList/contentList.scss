@@ -1,0 +1,8 @@
+.infinite-scroll-component {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  & > span {
+    margin-bottom: 8vh;
+  }
+}
