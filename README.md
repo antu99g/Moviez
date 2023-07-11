@@ -13,7 +13,9 @@ This is a movie website built using react. This app uses an external api named '
 
 - Advanced sorting in search results
 
-- Filtration in
+- Added filtration in explore page
+
+- Dynamically rendered background
 -->
 
 ## Run Locally
@@ -49,6 +51,12 @@ To run this project locally follow these steps :
 To run this project, you need to add the following environment variables in your .env file
 
 `VITE_MOVIE_APP_TMDB_TOKEN` : Secure key provided by TMDB
+
+## API Reference
+
+External API called `TMDB` is used in this project. \*\*Requires sign up.
+
+[TMDB](https://www.themoviedb.org/)
 
 ## Hosted Link
 
