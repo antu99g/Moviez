@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./header.scss";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { HiOutlineSearch } from "react-icons/hi";
+import { HiOutlineSearch, HiHome } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import { SlMenu } from "react-icons/sl";
 
@@ -55,6 +55,9 @@ const Header = () => {
 
       <ul className="menu">
         <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
           <Link to="/explore/movie">Movies</Link>
         </li>
         <li>
@@ -66,17 +69,18 @@ const Header = () => {
       </ul>
 
       <div className="mobileMenu">
+        <Link to="/">
+          <HiHome />
+        </Link>
+
         <HiOutlineSearch onClick={toggleSearchModal} />
+
         {isMobileMenuOpen ? (
           <>
             <MdClose onClick={closeMobileMenu} />
             <ul className="mobileMenuItems">
-              <li>
-                <Link to="/explore/movie">Movies</Link>
-              </li>
-              <li>
-                <Link to="/explore/tv">TV Shows</Link>
-              </li>
+              <li onClick={() => navigate("/explore/movie")}>Movies</li>
+              <li onClick={() => navigate("/explore/tv")}>TV Shows</li>
             </ul>
           </>
         ) : (

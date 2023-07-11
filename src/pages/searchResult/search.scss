@@ -1,5 +1,10 @@
+@import "../../mixins.scss";
+
 .searchResultContainer {
-  padding: 16vh 5vw 10vh;
+  padding: 12vh 5vw 10vh;
+  @include md {
+    padding: 16vh 5vw 10vh;
+  }
   .pageTitle {
     margin: 0 0 5vh;
     display: flex;
