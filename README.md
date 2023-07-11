@@ -2,6 +2,8 @@
 
 This is a movie website built using react. This app uses an external api named 'TMDB'.
 
+<br/><br/>
+
 ## Tech Stack
 
 `React` `Redux Toolkit` `SCSS`
@@ -15,6 +17,8 @@ This is a movie website built using react. This app uses an external api named '
 
 - Filtration in
 -->
+
+<br/><br/>
 
 ## Run Locally
 
@@ -44,15 +48,21 @@ To run this project locally follow these steps :
   npm run dev
 ```
 
+<br/><br/>
+
 ## Environment Variables
 
 To run this project, you need to add the following environment variables in your .env file
 
 `VITE_MOVIE_APP_TMDB_TOKEN` : Secure key provided by TMDB
 
+<br/><br/>
+
 ## Hosted Link
 
 Visit site: [Moviez](https://moviez-384f35.netlify.app)
+
+<br/><br/>
 
 ## Screenshots
 
