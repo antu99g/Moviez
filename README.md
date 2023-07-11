@@ -2,8 +2,6 @@
 
 This is a movie website built using react. This app uses an external api named 'TMDB'.
 
-<br/><br/>
-
 ## Tech Stack
 
 `React` `Redux Toolkit` `SCSS`
@@ -55,8 +53,6 @@ To run this project locally follow these steps :
 To run this project, you need to add the following environment variables in your .env file
 
 `VITE_MOVIE_APP_TMDB_TOKEN` : Secure key provided by TMDB
-
-<br/><br/>
 
 ## Hosted Link
 
