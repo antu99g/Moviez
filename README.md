@@ -16,7 +16,7 @@ This is a movie website built using react. This app uses an external api named '
 - Added filtration in explore page
 -->
 
-- Dynamically rendered background
+- Dynamically rendered background image
 
 - Lazy loading of images
 
