@@ -33,7 +33,7 @@ To run this project locally follow these steps :
 1. Clone the project
 
 ```bash
-  git clone https://github.com/antu99g/Moviez
+  git clone https://github.com/antu99g/Moviez.git
 ```
 
 2. Go to the project directory
