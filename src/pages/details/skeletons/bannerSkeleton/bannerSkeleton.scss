@@ -1,9 +1,15 @@
+@import "../../../../mixins.scss";
+
 .bannerSkeletonContainer {
-  flex-grow: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 12px;
   overflow-x: hidden;
+  @include md {
+    width: auto;
+    flex-grow: 1;
+  }
   & .skeletonRow {
     height: 12px;
     border-radius: 10px;

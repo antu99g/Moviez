@@ -73,7 +73,11 @@ const SearchModal = ({ toggleSearchModal }) => {
               ? baseUrl + item.poster_path
               : PosterFallback;
             return (
-              <Link to={`/${item.media_type}/${item.id}`} key={index}>
+              <Link
+                to={`/${item.media_type}/${item.id}`}
+                onClick={() => toggleSearchModal(false)}
+                key={index}
+              >
                 <div className="resultItem">
                   <img
                     src={posterUrl}

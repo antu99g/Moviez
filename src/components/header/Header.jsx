@@ -105,19 +105,7 @@ const Header = () => {
         )}
       </div>
 
-      {isSearchOpen && (
-        <SearchModal toggleSearchModal={toggleSearchModal} />
-        // <div className="searchModal">
-        //   <input
-        //     type="text"
-        //     placeholder="Search for a movie or tv show..."
-        //     onChange={handleSearchInput}
-        //     onKeyUp={handleSearch}
-        //   />
-        //   <HiOutlineSearch onClick={handleSearch} />
-        //   <MdClose onClick={toggleSearchModal} />
-        // </div>
-      )}
+      {isSearchOpen && <SearchModal toggleSearchModal={toggleSearchModal} />}
     </header>
   );
 };
