@@ -9,8 +9,11 @@
     margin: 0 0 5vh;
     display: flex;
     align-items: center;
-    font-size: 2em;
+    font-size: 1.7em;
     font-weight: 500;
+    @include md {
+      font-size: 2em;
+    }
     .queryHeader {
       margin-left: 14px;
       font-weight: 600;

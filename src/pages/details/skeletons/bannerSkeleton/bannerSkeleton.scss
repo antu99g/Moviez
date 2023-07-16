@@ -1,0 +1,23 @@
+.bannerSkeletonContainer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-x: hidden;
+  & .skeletonRow {
+    height: 12px;
+    border-radius: 10px;
+    background-color: var(--skeleton-bg);
+  }
+  & > .iconRowSkeleton {
+    margin: 20px 0;
+    display: flex;
+    gap: 25px;
+    & > div {
+      height: 50px;
+      width: 50px;
+      background-color: var(--skeleton-bg);
+      border-radius: 50%;
+    }
+  }
+}

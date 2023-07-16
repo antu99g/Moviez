@@ -1,0 +1,49 @@
+@import "../../mixins.scss";
+
+.skeletonHeader {
+  margin: 0 0 5vh;
+  display: flex;
+  align-items: center;
+  font-size: 1.7em;
+  font-weight: 500;
+  @include md {
+    font-size: 2em;
+  }
+}
+
+.contentSkeletonContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .contentSkeletonItem {
+    width: 45%;
+    max-width: 250px;
+    margin-bottom: 40px;
+    @include sm {
+      width: 28%;
+    }
+    @include lg {
+      width: 22%;
+    }
+    & > * {
+      background-color: var(--skeleton-bg);
+    }
+    .contentPosterBlock {
+      width: 100%;
+      aspect-ratio: 1 / 1.5;
+      border-radius: 10px;
+    }
+    .title {
+      width: 80%;
+      height: 8.5px;
+      margin: 12px 0 8px 5px;
+      border-radius: 10px;
+    }
+    .date {
+      width: 55%;
+      height: 8px;
+      margin-left: 5px;
+      border-radius: 10px;
+    }
+  }
+}

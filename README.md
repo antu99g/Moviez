@@ -22,7 +22,7 @@ This is a movie website built using react. This app uses an external api named '
 
 - Infinite scrolling in search results and explore page
 
-<!-- - Added skeletons in different components -->
+- Skeletons added in different components
 
 - Responsive navbar menu, different for smaller screen sizes
 

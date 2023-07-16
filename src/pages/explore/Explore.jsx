@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./explore.scss";
 import { fetchDataFromApi } from "../../api";
-import { ContentList } from "../../components";
+import { ContentList, ContentSkeleton } from "../../components";
 import { BiLoaderAlt } from "react-icons/bi";
 
 const Explore = () => {
@@ -46,7 +46,11 @@ const Explore = () => {
 
   return (
     <div className="exploreContainer">
-      {data?.results?.length > 0 ? (
+      {pageNum === 1 && loading ? (
+        <ContentSkeleton
+          header={`Explore ${mediaType === "tv" ? "TV Shows" : "Movies"}`}
+        />
+      ) : data?.results?.length > 0 ? (
         <>
           <h1 className="pageTitle">
             {`Explore ${mediaType === "tv" ? "TV Shows" : "Movies"}`}
@@ -59,11 +63,10 @@ const Explore = () => {
           />
         </>
       ) : (
-        !loading && (
-          <div className="resultNotFound">Sorry, No results found!</div>
-        )
+        <div className="resultNotFound">No results found!</div>
       )}
-      {loading && <BiLoaderAlt className="loader" />}
+
+      {loading && pageNum !== 1 && <BiLoaderAlt className="loader" />}
     </div>
   );
 };

@@ -1,0 +1,14 @@
+@import "../../../../mixins.scss";
+
+.imageSkeleton {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1 / 1.2;
+  margin-bottom: 5vh;
+  border-radius: 12px;
+  background-color: var(--skeleton-bg);
+  @include md {
+    width: 350px;
+    margin-bottom: 0;
+  }
+}

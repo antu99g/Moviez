@@ -9,6 +9,8 @@ import Cast from "./cast/Cast";
 import VideosSection from "./videosSection/VideosSection";
 import { useState } from "react";
 import { VideoModal } from "../../components";
+import ImageSkeleton from "./skeletons/imageSkeleton/ImageSkeleton";
+import BannerSkeleton from "./skeletons/bannerSkeleton/BannerSkeleton";
 
 const Details = () => {
   const { mediaType, id } = useParams();
@@ -60,7 +62,9 @@ const Details = () => {
           />
         )}
 
-        {!loading && (
+        {loading ? (
+          <ImageSkeleton />
+        ) : (
           <LazyLoadImage
             src={baseUrl + data?.poster_path}
             alt={data?.title || data?.name}
@@ -69,7 +73,9 @@ const Details = () => {
           />
         )}
 
-        {!loading && !creditsLoading && (
+        {loading || creditsLoading ? (
+          <BannerSkeleton />
+        ) : (
           <BannerContent
             data={data}
             crew={credits?.crew}

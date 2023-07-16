@@ -4,14 +4,12 @@ const Skeleton = () => {
   const skeletonItems = new Array(5);
   return (
     <div className="skeletonContainer">
-      {skeletonItems.map((key, index) => {
+      {[...skeletonItems].map((_, index) => {
         return (
           <div className="skeletonItem" key={index}>
-            <div className="posterBlock" />
-            <div className="textBlock">
-              <div className="title skeleton" />
-              <div className="date skeleton" />
-            </div>
+            <div className="posterBlock skeleton" />
+            <div className="title skeleton" />
+            <div className="date skeleton" />
           </div>
         );
       })}

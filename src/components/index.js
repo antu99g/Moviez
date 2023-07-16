@@ -6,3 +6,4 @@ export { default as ContentList } from "./contentList/ContentList";
 export { default as CardItem } from "./cardItem/CardItem";
 export { default as VideoModal } from "./videoModal/VideoModal";
 export { default as Rating } from "./rating/Rating";
+export { default as ContentSkeleton } from "./contentSkeleton/ContentSkeleton";
