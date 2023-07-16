@@ -9,7 +9,9 @@ const Explore = () => {
   const { mediaType } = useParams();
 
   const [data, setData] = useState(null);
+
   const [pageNum, setPageNum] = useState(1);
+
   const [loading, setLoading] = useState(true);
 
   const fetchPageData = () => {

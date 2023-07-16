@@ -16,13 +16,17 @@ This is a movie website built using react. This app uses an external api named '
 - Added filtration in explore page
 -->
 
+- Search with any keyword
+
+- Search suggestion
+
 - Dynamically rendered background image
 
 - Lazy loading of images
 
-- Infinite scrolling in search results and explore page
-
 - Skeletons added in different components
+
+- Infinite scrolling in search-results and explore-page
 
 - Responsive navbar menu, different for smaller screen sizes
 

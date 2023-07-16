@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./header.scss";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import SearchModal from "../searchModal/SearchModal";
 import { HiOutlineSearch, HiHome } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import { SlMenu } from "react-icons/sl";
@@ -14,37 +15,39 @@ const Header = () => {
 
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  const [keyword, setKeyword] = useState("");
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  const openMobileMenu = () => {
-    setIsMobileMenuOpen(true);
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
-
-  const toggleSearchModal = () => {
-    setIsSearchOpen((prevState) => !prevState);
-  };
-
-  const handleSearchInput = (e) => {
-    setKeyword(e.target.value);
-  };
-
-  const handleSearch = (event) => {
-    if (
-      event.type === "click" ||
-      (event.type === "keyup" && event.key === "Enter")
-    ) {
-      setIsSearchOpen(false);
-      navigate(`/search/${keyword}`);
+  const showMobileMenu = (state) => {
+    if (typeof state === "boolean") {
+      setIsMobileMenuOpen(state);
+    } else {
+      setIsMobileMenuOpen((prevState) => !prevState);
     }
   };
+
+  const toggleSearchModal = (state) => {
+    if (typeof state === "boolean") {
+      setIsSearchOpen(state);
+    } else {
+      setIsSearchOpen((prevState) => !prevState);
+    }
+  };
+
+  // const handleSearchInput = (e) => {
+  //   setKeyword(e.target.value);
+  // };
+
+  // const handleSearch = (event) => {
+  //   if (
+  //     event.type === "click" ||
+  //     (event.type === "keyup" && event.key === "Enter")
+  //   ) {
+  //     setIsSearchOpen(false);
+  //     navigate(`/search/${keyword}`);
+  //   }
+  // };
 
   return (
     <header className={`header ${isMobileMenuOpen ? "mobileHeader" : ""}`}>
@@ -77,28 +80,43 @@ const Header = () => {
 
         {isMobileMenuOpen ? (
           <>
-            <MdClose onClick={closeMobileMenu} />
+            <MdClose onClick={() => showMobileMenu(false)} />
             <ul className="mobileMenuItems">
-              <li onClick={() => navigate("/explore/movie")}>Movies</li>
-              <li onClick={() => navigate("/explore/tv")}>TV Shows</li>
+              <li
+                onClick={() => {
+                  showMobileMenu(false);
+                  navigate("/explore/movie");
+                }}
+              >
+                Movies
+              </li>
+              <li
+                onClick={() => {
+                  showMobileMenu(false);
+                  navigate("/explore/tv");
+                }}
+              >
+                TV Shows
+              </li>
             </ul>
           </>
         ) : (
-          <SlMenu onClick={openMobileMenu} />
+          <SlMenu onClick={() => showMobileMenu(true)} />
         )}
       </div>
 
       {isSearchOpen && (
-        <div className="searchModal">
-          <input
-            type="text"
-            placeholder="Search for a movie or tv show..."
-            onChange={handleSearchInput}
-            onKeyUp={handleSearch}
-          />
-          <HiOutlineSearch onClick={handleSearch} />
-          <MdClose onClick={toggleSearchModal} />
-        </div>
+        <SearchModal toggleSearchModal={toggleSearchModal} />
+        // <div className="searchModal">
+        //   <input
+        //     type="text"
+        //     placeholder="Search for a movie or tv show..."
+        //     onChange={handleSearchInput}
+        //     onKeyUp={handleSearch}
+        //   />
+        //   <HiOutlineSearch onClick={handleSearch} />
+        //   <MdClose onClick={toggleSearchModal} />
+        // </div>
       )}
     </header>
   );

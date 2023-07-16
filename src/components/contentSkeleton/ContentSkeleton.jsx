@@ -1,7 +1,7 @@
 import "./contentSkeleton.scss";
 
 const ContentSkeleton = ({ header }) => {
-  const skeletonItems = new Array(6);
+  const skeletonItems = new Array(8);
   return (
     <>
       <h1 className="skeletonHeader">{header}</h1>

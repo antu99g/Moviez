@@ -102,43 +102,8 @@
       }
     }
   }
-  .searchModal {
-    box-sizing: border-box;
-    width: min(100%, 100vw);
-    padding: 2vh 4vw;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: flex;
-    background-color: white;
-    animation: dropdown 0.3s normal;
-    @include md {
-      padding: 2vh 8vw;
-    }
-    & input {
-      flex-grow: 1;
-      border: 0;
-      &:focus {
-        outline: none;
-      }
-    }
-    & svg {
-      margin: 0 10px;
-      font-size: 1.2em;
-      color: darkslategrey;
-    }
-  }
 }
 
 .mobileHeader {
   background-color: var(--black2);
-}
-
-@keyframes dropdown {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: "100%";
-  }
 }

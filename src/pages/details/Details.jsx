@@ -80,7 +80,7 @@ const Details = () => {
             data={data}
             crew={credits?.crew}
             creditsLoading={creditsLoading}
-            trailerId={videos?.results?.[0].key}
+            trailerId={videos?.results?.[0]?.key}
             openVideoModal={openVideoModal}
           />
         )}
