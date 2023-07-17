@@ -20,6 +20,8 @@ This is a movie website built using react. This app uses an external api named '
 
 - Search suggestion
 
+- Responsive search-suggestion layout
+
 - Dynamically rendered background image
 
 - Lazy loading of images

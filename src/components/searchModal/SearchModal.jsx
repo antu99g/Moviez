@@ -18,11 +18,32 @@ const SearchModal = ({ toggleSearchModal }) => {
 
   const [keyword, setKeyword] = useState("");
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   useEffect(() => {
     if (keyword !== "") {
       fetchDataFromApi(`/search/multi?query=${keyword}&page=1`).then((res) => {
-        const requiredData =
-          res.results.length > 7 ? res.results.splice(0, 7) : res.results;
+        let requiredData;
+        if (isMobile) {
+          requiredData =
+            res.results.length > 7 ? res.results.splice(0, 7) : res.results;
+        } else {
+          requiredData =
+            res.results.length > 14 ? res.results.splice(0, 14) : res.results;
+        }
         setData(requiredData);
       });
     } else {
