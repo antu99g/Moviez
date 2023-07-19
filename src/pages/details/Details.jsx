@@ -6,11 +6,12 @@ import { BackgroundImage, Carousal } from "../../components";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import BannerContent from "./bannerContent/BannerContent";
 import Cast from "./cast/Cast";
-import VideosSection from "./videosSection/VideosSection";
+import VideoSection from "./VideoSection/VideoSection";
 import { useState } from "react";
 import { VideoModal } from "../../components";
 import ImageSkeleton from "./skeletons/imageSkeleton/ImageSkeleton";
 import BannerSkeleton from "./skeletons/bannerSkeleton/BannerSkeleton";
+import CastSkeleton from "./skeletons/castSkeleton/CastSkeleton";
 
 const Details = () => {
   const { mediaType, id } = useParams();
@@ -86,22 +87,26 @@ const Details = () => {
         )}
       </div>
 
-      {!creditsLoading && (
+      {creditsLoading ? (
         <>
           <h2 className="castHeader">Top Cast</h2>
-          <div className="castContainer">
-            {credits.cast.map((member, index) => {
-              return <Cast cast={member} key={member.cast_id || index} />;
-            })}
-          </div>
+          <CastSkeleton />
         </>
+      ) : (
+        credits?.cast?.length > 0 && (
+          <>
+            <h2 className="castHeader">Top Cast</h2>
+            <div className="castContainer">
+              {credits.cast.map((member, index) => {
+                return <Cast cast={member} key={member.cast_id || index} />;
+              })}
+            </div>
+          </>
+        )
       )}
 
       {!loadingVideo && videos.results.length > 0 && (
-        <VideosSection
-          videos={videos.results}
-          openVideoModal={openVideoModal}
-        />
+        <VideoSection videos={videos.results} openVideoModal={openVideoModal} />
       )}
 
       <Carousal header="Similar Movies" info={similarInfo} />

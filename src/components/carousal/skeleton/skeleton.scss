@@ -1,33 +1,38 @@
 @import "../../../mixins.scss";
 
 .skeletonContainer {
+  width: 100%;
   position: relative;
   margin-bottom: 12vh;
   display: flex;
   gap: max(3vw, 15px);
+  justify-content: space-between;
   overflow-x: auto;
-  .skeletonItem {
+  & > .skeletonItem {
     display: flex;
     flex-direction: column;
-    width: 130px;
+    min-width: 130px;
     @include md {
       min-width: 150px;
+    }
+    @include lg {
+      min-width: 160px;
     }
     & > * {
       background-color: var(--skeleton-bg);
     }
-    .posterBlock {
+    & > .posterBlock {
       width: 100%;
       aspect-ratio: 1 / 1.5;
       border-radius: 10px;
     }
-    .title {
+    & > .title {
       width: 80%;
       height: 8.5px;
       margin: 12px 0 8px 5px;
       border-radius: 10px;
     }
-    .date {
+    & > .date {
       width: 55%;
       height: 8px;
       margin-left: 5px;

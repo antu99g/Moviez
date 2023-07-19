@@ -5,7 +5,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  .searchBar {
+  & > .searchBar {
     box-sizing: border-box;
     width: min(100%, 100vw);
     padding: 2vh 4vw;
@@ -23,7 +23,6 @@
       top: 0;
       left: 0;
       z-index: -5;
-      // background-color: rgba(0, 0, 0, 0.9);
       background-color: var(--black3);
       opacity: 0.9;
       -webkit-backdrop-filter: blur(8px);
@@ -43,7 +42,7 @@
       cursor: pointer;
     }
   }
-  .searchSuggestion {
+  & > .searchSuggestion {
     margin-top: 13px;
     display: grid;
     place-content: center;

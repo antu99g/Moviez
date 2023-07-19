@@ -8,7 +8,7 @@
   & > * {
     padding: 0 5vw;
   }
-  .listHeader {
+  & > .listHeader {
     margin-bottom: 4vh;
     display: flex;
     justify-content: space-between;
@@ -19,12 +19,12 @@
       font-size: 1.5em;
     }
   }
-  .arrow {
+  & > .arrow {
     font-size: 30px;
     color: white;
     position: absolute;
     top: 44%;
-    transform: translateY(50%);
+    transform: translateY(-50%);
     cursor: pointer;
     opacity: 0.5;
     z-index: 1;
@@ -36,13 +36,13 @@
       opacity: 0.8;
     }
   }
-  .carouselLeftNav {
+  & > .carouselLeftNav {
     left: -20px;
   }
-  .carouselRightNav {
+  & > .carouselRightNav {
     right: -20px;
   }
-  .listItemContainer {
+  & > .listItemContainer {
     position: relative;
     margin-bottom: 12vh;
     display: flex;

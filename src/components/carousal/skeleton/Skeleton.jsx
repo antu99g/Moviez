@@ -1,7 +1,7 @@
 import "./skeleton.scss";
 
 const Skeleton = () => {
-  const skeletonItems = new Array(5);
+  const skeletonItems = new Array(6);
   return (
     <div className="skeletonContainer">
       {[...skeletonItems].map((_, index) => {

@@ -7,7 +7,7 @@
   align-items: center;
   background-color: white;
   border-radius: 20px;
-  .tabItem {
+  & > .tabItem {
     width: 50%;
     position: relative;
     padding: 8px 0;
@@ -20,26 +20,8 @@
     cursor: pointer;
     border-radius: 20px;
   }
-  .active {
+  & > .active {
     color: white;
     background-image: var(--gradient);
   }
-  // .activeBg {
-  //   box-sizing: content-box;
-  //   height: 30px;
-  //   height: 100%;
-  //   // width: 50%;
-  //   width: 100px;
-  //   border-radius: 18px;
-  //   background-image: var(--gradient);
-  //   position: absolute;
-  //   top: 2px;
-  //   transition: all cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.4s;
-  // }
-  // .leftTabBg {
-  //   left: 0px;
-  // }
-  // .rightTabBg {
-  //   left: 100px;
-  // }
 }

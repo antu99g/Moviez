@@ -1,0 +1,45 @@
+@import "../../../../mixins.scss";
+
+.castSkeleton {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin-bottom: 10vh;
+  padding: 0 5vw;
+  display: flex;
+  gap: 20px;
+  @include md {
+    gap: 50px;
+  }
+  .castItemSkeleton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > div:nth-child(2) {
+      margin: 25px 0 15px;
+      width: 110px;
+      @include md {
+        width: 130px;
+      }
+    }
+    & > div:nth-child(3) {
+      width: 80px;
+      @include md {
+        width: 100px;
+      }
+    }
+    .profileSkeleton {
+      height: 90px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background-color: var(--skeleton-bg);
+      @include md {
+        height: 110px;
+      }
+    }
+    .skeletonRow {
+      height: 9px;
+      border-radius: 10px;
+      background-color: var(--skeleton-bg);
+    }
+  }
+}

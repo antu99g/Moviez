@@ -10,7 +10,7 @@
     width: auto;
     flex-grow: 1;
   }
-  & .skeletonRow {
+  .skeletonRow {
     height: 12px;
     border-radius: 10px;
     background-color: var(--skeleton-bg);

@@ -2,7 +2,7 @@ import "./videoSection.scss";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { BsPlayCircle } from "react-icons/bs";
 
-const VideosSection = ({ videos, openVideoModal }) => {
+const VideoSection = ({ videos, openVideoModal }) => {
   return (
     <div className="videoSection">
       <h2 className="videoHeader">Official Videos</h2>
@@ -16,6 +16,7 @@ const VideosSection = ({ videos, openVideoModal }) => {
               >
                 <LazyLoadImage
                   src={`https://img.youtube.com/vi/${video.key}/mqdefault.jpg`}
+                  effect="blur"
                   className="thumbnail"
                 />
                 <BsPlayCircle />
@@ -30,4 +31,4 @@ const VideosSection = ({ videos, openVideoModal }) => {
   );
 };
 
-export default VideosSection;
+export default VideoSection;
